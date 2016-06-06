@@ -10,11 +10,6 @@ MAINTAINER Matthew Cuyar <matt@enctypeapparel.com>
 ENV S6_VERSION v1.17.2.0
 
 ##/
- # Create the root file system
- #/
-COPY rootfs /
-
-##/
  # Install the s6 overlay
  #/
 RUN apk add --no-cache sudo bash curl gzip unzip wget \
@@ -22,6 +17,11 @@ RUN apk add --no-cache sudo bash curl gzip unzip wget \
  && tar xvfz /tmp/s6-overlay.tar.gz -C / \
  && rm -f /tmp/s6-overlay.tar.gz \
  && apk del wget
+
+##/
+ # Create the root file system
+ #/
+COPY rootfs /
 
 ##/
  # Run the system init on entry
