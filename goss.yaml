@@ -1,0 +1,8 @@
+package:
+  wget:
+    installed: false
+process:
+  s6-supervise:
+    running: true
+  s6-svscan:
+    running: true

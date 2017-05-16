@@ -12,7 +12,7 @@ ENV S6_VERSION v1.19.1.1
 ##/
  # Install the s6 overlay
  #/
-RUN apk add --no-cache sudo bash git curl gzip unzip zlib wget openssh-client \
+RUN apk add --no-cache wget \
  && wget https://github.com/just-containers/s6-overlay/releases/download/${S6_VERSION}/s6-overlay-amd64.tar.gz --no-check-certificate -O /tmp/s6-overlay.tar.gz \
  && tar xvfz /tmp/s6-overlay.tar.gz -C / \
  && rm -f /tmp/s6-overlay.tar.gz \
