@@ -1,6 +1,8 @@
 package:
   wget:
     installed: false
+  bash:
+    installed: true
 process:
   s6-supervise:
     running: true
