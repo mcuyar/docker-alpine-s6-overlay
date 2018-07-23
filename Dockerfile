@@ -7,7 +7,7 @@ MAINTAINER Matthew Cuyar <matt@enctypeapparel.com>
 # @credit John Regan <john@jrjrtech.com>
 # @original https://github.com/just-containers/s6-overlay
 
-ENV S6_VERSION v1.19.1.1
+ENV S6_VERSION v1.21.4.0
 
 ##/
  # Install the s6 overlay
